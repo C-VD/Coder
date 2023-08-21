@@ -46,6 +46,9 @@ static HashMap<String, String> dictToDecodeMap(List<String> dictText){
 
     static String decode(String message, String dictFileName){
         List<String> dictionary = getDictionary(dictFileName);
+        if (dictionary == null) {
+            return message;
+        }
         String decoded = decodeByStrings(message, dictionary);
         return decoded;
     }
