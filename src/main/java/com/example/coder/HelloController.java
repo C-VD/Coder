@@ -13,11 +13,6 @@ public class HelloController {
     private TextField txtDictFileName;
 
     @FXML
-    protected void onHelloButtonClick() {
-        //welcomeText.setText("Welcome to JavaFX Application!");
-    }
-
-    @FXML
     public void encode(ActionEvent actionEvent)
     {
         String encoded = Coder.encode(txtMessage.getText(), txtDictFileName.getText());
